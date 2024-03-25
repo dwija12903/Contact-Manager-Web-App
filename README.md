@@ -67,3 +67,7 @@ npm start
 
 <a id="snippets"></a>
 ### 💡Snippets
+##### Create Contact
+<img src="https://github.com/dwija12903/Contact-Manager-Web-App/blob/main/img/CreateContact.png"></img>
+##### Contact List
+<img src="https://github.com/dwija12903/Contact-Manager-Web-App/blob/main/img/ContactList.png"></img>
