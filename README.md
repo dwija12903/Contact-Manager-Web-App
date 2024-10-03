@@ -34,11 +34,11 @@
 ### 🛠️ Usage
 1. Clone the repository:
 ```bash
-   git clone https://github.com/your-username/contact-manager.git
+   git clone https://github.com/dwija12903/Contact-Manager-Web-App.git
 ```
 2. Navigate to the project directory:
 ```bash
-cd contact-manager
+cd Contact-Manager-Web-App
 ```
 3. Install backend dependencies:
 ```bash
