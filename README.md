@@ -36,13 +36,14 @@ The **Contact Manager App** is a web application built with **Flask** for the ba
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
-   cd <repository-folder>
+   git clone https://github.com/dwija12903/Contact-Manager-Web-App.git
+   cd Contact-Manager-Web-App
    ```
 
 2. Install the required Python packages:
    ```bash
-   pip install Flask Flask-SQLAlchemy Flask-Cors
+   cd backend
+   pip install -r requirements.txt
    ```
 
 3. Create a `.env` file and set the database URI:
@@ -52,7 +53,7 @@ The **Contact Manager App** is a web application built with **Flask** for the ba
 
 4. Run the Flask backend:
    ```bash
-   python app.py
+   python main.py
    ```
 
 ### Frontend Setup
