@@ -1,73 +1,111 @@
-# Contact Manager Web App
-## Contact Manager is a simple web application built with Flask and React that allows users to manage their contacts.
+# 📞 Contact Manager App
 
-### 📇 Tables of Contents
-1. [Introduction](#intro)
-2. [Features](#features)
-3. [Technologies Used](#tech)
-4. [Usage](#usage)
-5. [Snippets](#snippets)
+## Description
 
-<a id="intro"></a>
-### 🚀 Introduction
-- It provides basic CRUD functionality for contact records, allowing users to add, view, edit, and delete contacts. 
-- The backend API is built with Flask, SQLAlchemy is used for database interactions, and the frontend is developed using React. 
-- This project is a great starting point for anyone looking to learn how to build full-stack web applications with Python and JavaScript.
+The **Contact Manager App** is a web application built with **Flask** for the backend and **React** for the frontend. It allows users to manage their contacts by providing functionalities to create, read, update, and delete (CRUD) contact information. ✨
 
-<a id="features"></a>
-### ✨ Features
-- Create new contacts with first name, last name, and email address.
-- View a list of existing contacts.
-- Edit contact details.
-- Delete contacts from the list.
+## Features
 
-<a id="tech"></a>
-### 🔧 Technologies Used
-- Flask
-- SQLAlchemy
-- React
-- HTML/CSS
-- CORS
-- SQLite
+- **View Contacts**: Retrieve and display a list of all contacts. 👀
+- **Create Contact**: Add new contacts with first name, last name, and email. ➕
+- **Edit Contact**: Update existing contact information. ✏️
+- **Delete Contact**: Remove contacts from the list. ❌
+- **Responsive Modal**: A modal interface for creating and editing contacts. 🆕
 
-<a id="usage"></a>
-### 🛠️ Usage
+## Technologies Used
+
+- **Frontend**: 
+  - React ⚛️
+  - CSS 🎨
+- **Backend**:
+  - Flask 🐍
+  - SQLAlchemy (ORM) 📦
+  - SQLite (Database) 🗄️
+- **APIs**: RESTful API for contact management 🌐
+- **CORS**: To enable cross-origin requests between the frontend and backend 🔗
+
+## Installation
+
+### Prerequisites
+
+- Node.js and npm (for React frontend) 🌱
+- Python and pip (for Flask backend) 🐍
+- SQLite (comes pre-installed with Python) 📚
+
+### Backend Setup
+
 1. Clone the repository:
-```bash
-   git clone https://github.com/dwija12903/Contact-Manager-Web-App.git
-```
-2. Navigate to the project directory:
-```bash
-cd Contact-Manager-Web-App
-```
-3. Install backend dependencies:
-```bash
-pip install -r requirements.txt
-```
-4. Install frontend dependencies:
-```bash
-cd frontend
-npm install
-```
-5. Start the Flask backend server:
-```bash
-python main.py
-```
-6. In a separate terminal, start the React frontend server:
-```bash
-cd frontend
-npm start
-```
-7. Access the web application at https://localhost:5000 in your web browser.
-8. Once the application is running, you can perform the following actions:
-    - View Contacts: Browse the list of existing contacts.
-    - Add Contact: Click on "Create New Contact" to add a new contact. Fill in the required information and click "Create".
-    - Edit Contact: Click on "Update" next to a contact to edit its details. Make the necessary changes and click "Update".
-    - Delete Contact: Click on "Delete" next to a contact to delete it from the list.
+   ```bash
+   git clone <repository-url>
+   cd <repository-folder>
+   ```
 
-<a id="snippets"></a>
-### 💡Snippets
-##### Create Contact
-<img src="https://github.com/dwija12903/Contact-Manager-Web-App/blob/main/img/CreateContact.png"></img>
-##### Contact List
-<img src="https://github.com/dwija12903/Contact-Manager-Web-App/blob/main/img/ContactList.png"></img>
+2. Install the required Python packages:
+   ```bash
+   pip install Flask Flask-SQLAlchemy Flask-Cors
+   ```
+
+3. Create a `.env` file and set the database URI:
+   ```plaintext
+   SQLALCHEMY_DATABASE_URI = sqlite:///mydatabase.db
+   ```
+
+4. Run the Flask backend:
+   ```bash
+   python app.py
+   ```
+
+### Frontend Setup
+
+1. Navigate to the frontend directory:
+   ```bash
+   cd frontend
+   ```
+
+2. Install the required npm packages:
+   ```bash
+   npm install
+   ```
+
+3. Create a `.env` file in the frontend directory and set the backend URL:
+   ```plaintext
+   REACT_APP_BACKEND_URL= "http://127.0.0.1:5000"
+   ```
+
+4. Start the React app:
+   ```bash
+   npm start
+   ```
+
+## Application Structure
+
+```
+.
+├── backend
+│   ├── app.py                 # Main Flask application
+│   ├── config.py              # Configuration settings for Flask and SQLAlchemy
+│   └── models.py              # Database models (Contact)
+└── frontend
+    ├── src
+    │   ├── App.js             # Main React component
+    │   ├── ContactList.js      # Component to display the list of contacts
+    │   └── ContactForm.js      # Component for adding/editing contacts
+    └── package.json            # npm package configuration
+```
+
+## Usage
+
+1. **Creating a Contact**: Click on "Add New Contact" to open the modal, fill in the details, and submit the form. 📝
+2. **Editing a Contact**: Click "Edit" next to the desired contact to populate the form with existing data, make changes, and submit. ✨
+3. **Deleting a Contact**: Click "Delete" next to a contact to remove it from the list after confirming the action. ⚠️
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. 📜
+
+## Acknowledgments
+
+- [Flask](https://flask.palletsprojects.com/) for the backend framework 🐍
+- [React](https://reactjs.org/) for the frontend library ⚛️
+- [SQLAlchemy](https://www.sqlalchemy.org/) for ORM capabilities 📦
+- [CORS](https://flask-cors.readthedocs.io/en/latest/) for handling cross-origin requests 🔗

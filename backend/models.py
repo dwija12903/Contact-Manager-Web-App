@@ -1,5 +1,4 @@
 # Contains all the databases 
-
 from config import db
 
 class Contact(db.Model):
