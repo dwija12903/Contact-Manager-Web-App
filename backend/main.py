@@ -1,6 +1,7 @@
 from flask import request, jsonify
 from config import app, db
 from models import Contact
+import os
 
 @app.route("/", methods=["GET"])
 def home():
@@ -63,4 +64,5 @@ def delete_contact(user_id):
 if __name__ == "__main__":
     with app.app_context():
         db.create_all()
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))  # Use the port assigned by Render
+    app.run(host="0.0.0.0", port=port, debug=True)
